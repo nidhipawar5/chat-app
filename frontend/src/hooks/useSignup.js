@@ -22,7 +22,7 @@ function handleInputErrors({fullName, username, password, confirmPassword, gende
 const useSignup = () => {
 
   const [loading, setLoading] = useState(false)
-  const [authUser, setAuthUser]=useAuthContext()
+  const {authUser, setAuthUser}=useAuthContext()
 
   const signup = async ({fullName, username, password, confirmPassword, gender}) => {
     const success = handleInputErrors({fullName, username, password, confirmPassword, gender})
